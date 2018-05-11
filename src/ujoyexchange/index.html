@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="webps">
+
+<head>
+    <title>Ujoy序列号兑奖</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://www.ujoy.com/css/home.css">
+    <script type="text/javascript">
+      (function(){
+          var userAgent = window.navigator.userAgent;
+          var ua = userAgent.toLowerCase();
+          var platform = {
+                isAndroid: function() {
+                    return ua.indexOf("android") > -1;
+                },
+                isIOS: function() {
+                    // return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+                    return ua.indexOf("iphone") > -1;
+                },
+                isWinPhone: function() {
+                    return !!navigator.userAgent.match(/Windows Phone/i);
+                },
+                isIpad : function(){
+                    return ua.indexOf("ipad") > -1;
+                },
+                isPhone: function() {
+                    return this.isAndroid() || this.isIOS() || this.isWinPhone() || this.isIpad();
+                }
+          }
+          if(platform.isPhone()){
+              window.location.href = '/yhjy/ujoyexchange/m/';
+          }
+      })()
+    </script>
+<style type="text/css">
+    
+    .test-img {
+        display: none;
+    }
+    .test-div {
+        width: 100px;
+        height: 100px;
+        background-image: url();
+    }
+</style>
+</head>
+<body>
+    <div class="ujoy-header">
+        <div class="ujoy-header-wrap">
+             <!-- logo  -->
+            <h1 class="ujoy-header-logo">ujoy</h1>
+            <div class="ujoy-header-con">
+                 <!-- 导航  -->
+                <ul class="ujoy-header-nav">
+                    <li><a href="//mobile.ujoy.com?zone=zh" target="_blank"><i class="i-home"></i><span data-lang="homepage"></span></a></li>
+                    <li><a href="//store.ujoy.com?language=zh" class="cur" target="_blank"><i class="i-recharge"></i><span data-lang="recharge"></span></a></li>
+                    <li><a href="//support.ujoy.com?zone=zh" target="_blank"><i class="i-service"></i><span data-lang="service"></span></a></li>
+                </ul>
+                <div class="ujoy-header-info">
+                    <div id="J_login_before" class="fl">
+                        <div class="ujoy-header-info__item">
+                            <a href="//passport.ujoy.com/?type=login&zone=zh&forward=//events.ujoy.com/static/html/yhjy/ujoyexchange/" class="m-btn m-btn-light"><span data-lang="login"></span></a>
+                        </div>
+                        <div class="ujoy-header-info__item">
+                            <a href="//passport.ujoy.com/?type=register&zone=zh&forward=//events.uoy.com/static/html/yhjy/ujoyexchange/" class="m-btn m-btn-light"><span data-lang="register"></span></a>
+                        </div>
+                    </div>
+                    <div id="J_login_after" class="fl hide">
+                        <div class="ujoy-header-info__item ujoy-header-user m-pop-hover">
+                            <a class="ujoy-header-user_pic" href="javascript:;"><img class="J_avatar" src="#"></a>
+                            <div class="m-pop">
+                                <div class="ujoy-header-user_b">
+                                     <!-- 头像  -->
+                                    <div class="ujoy-header-user_l">
+                                        <img class="J_avatar" src="#">
+                                    </div>
+                                    <div class="ujoy-header-user_r">
+                                        <p>
+                                            <span id="J_date"></span>
+                                        </p>
+                                        <p id="J_user"></p>
+                                    </div>
+                                </div>
+                                <div class="ujoy-header-user_f">
+                                    <a href="//passport.ujoy.com/index/account?zone=zh"><span data-lang="account"></span></a>
+                                    <a href="javascript:;" id="J_logout"><span data-lang="logout"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ujoy-header-info__item m-pop-hover">
+                        <a href="javascript:;" class="m-btn m-btn-light select">
+                            <em class="i-country-cn"></em>
+                            <span data-lang="curr-lang"></span>
+                            <i class="i-triangle"></i>
+                        </a>
+                         <!-- 下拉  -->
+                        <div class="m-pop">
+                            <ul class="m-pop-box">
+                                <li>
+                                    <a href="?zone=en&type=">
+                                        <i class="i-country-gb"></i>
+                                        English
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="?zone=zh&type=">
+                                        <i class="i-country-cn"></i>
+                                        简体中文
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="?zone=tw&type=">
+                                        <i class="i-country-cn"></i>
+                                        繁體中文
+                                    </a>
+                                </li>
+                                <li class="vn-link" style="display:none;">
+                                    <a href="?zone=vi&type=">
+                                        <i class="i-country-vn"></i>
+                                        Tiếng việt
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="main">
+            <h1 class="title"><span data-lang="code-exchange"></span></h1>
+            <div class="form">
+                <div class="form-group J_select">
+                    <p id="J_game" class="form-control"><span data-lang="chose-game"></span></p>
+                    <i class="form-btn"></i>
+                </div>
+                <div class="form-group J_select">
+                    <p id="J_server" class="form-control"><span data-lang="chose-server"></span></p>
+                    <i class="form-btn"></i>
+                </div>
+                <div class="form-group J_select">
+                    <p id="J_role" class="form-control"><span data-lang="chose-character"></span></p>
+                    <i class="form-btn"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="J_card" data-lang="input-gift-code" placeholder="" class="form-control form-card">
+                    <!--[if lt IE 10]><span class="placeholder">请输入礼包码</span><![endif]-->
+                </div>
+                <div class="form-group">
+                    <input type="text" data-lang="input-verify-code" placeholder="" id="J_code" class="form-control form-code">
+                    <!--[if lt IE 10]><span class="placeholder">请输入验证码</span><![endif]-->
+                    <img src="//eventsapi.ujoy.com/serial_exchange/check_code" alt="" id="J_imgcode" class="J_fresh form-img">
+                    <i class="J_fresh form-refresh"></i>
+                    <img class="test-img" src="./img/back.png" style="position: absolute;" alt="">
+                    <img class="test-img" src="./img/bg.jpg" style="position: absolute;" alt="">
+                    <div class="test-div"></div>
+                </div>
+                <div class="form-submit"><button id="J_change" class="form-button"><span data-lang="exchange"></span></button></div>
+                <div class="form-record"><a href="" id="J_btn_record" class="form-link"><span data-lang="exchange-log"></span></a></div>
+            </div>
+            <div class="notices">
+                <p class="notices-item" data-lang="noticetitle"></p>
+                <p class="notices-item" data-lang="line1"></p>
+                <p class="notices-item" data-lang="line2"></p>
+                <p class="notices-item" data-lang="line3"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ujoy-footer">
+        <div class="ujoy-footer-wrap">
+            <div class="ujoy-footer-follow">
+                <span>关注UJOY</span>
+                <a href="https://www.facebook.com/UjoyGames" target="_blank"><i class="ujoy-footer-facebook"></i></a>
+                <a href="https://twitter.com/UjoyGames" target="_blank"><i class="ujoy-footer-twitter"></i></a>
+                <a href="https://www.youtube.com/user/UjoyGames" target="_blank"><i class="ujoy-footer-youtube"></i></a>
+            </div>
+            <div class="ujoy-footer-copyright">
+                <span>Copyright © www.ujoy.com All rights reserved</span>
+                <p>
+                    <a href="//mobile.ujoy.com/contact?zone=zh" target="_blank">联系我们</a> |
+                    <a href="//mobile.ujoy.com/terms?zone=zh" target="_blank">服务条款</a> |
+                    <a href="//mobile.ujoy.com/privacy?zone=zh" target="_blank">隐私政策</a></p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="J_mask" class="mask"></div>
+    <div id="J_dialog" class="dialog">
+        <ul id="J_lists" class="lists">
+        </ul>
+    </div>
+    <div id="J_mask2" class="mask2"></div>
+    <div id="J_record" class="popup">
+        <div class="popup-head">
+            <h3 class="popup-title"><span data-lang="exchange-log"></span></h3>
+            <button id="J_exit" class="popup-exit"></button>
+        </div>
+        <div class="popup-body">
+            <ul id="J_records" class="popup-records"><!--
+                <li class="popup-record">
+                    <div class="popup-left">
+                        <p class="popup-game">zhuxian</p>
+                        <p class="popup-code">JUDMf90dsdfHNGJ</p>
+                    </div>
+                    <div class="popup-right">
+                        <p class="popup-role">这是你的角色</p>
+                        <p class="popup-time">兑换时间</p>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+
+    <footer class="f_common_footer j-f_common_footer"></footer>
+
+    <!-- FACEBOOK Analytics -->
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '928923877134662']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=928923877134662&amp;ev=PixelInitialized" /></noscript>
+
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '428868950584665']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=428868950584665&amp;ev=PixelInitialized" /></noscript>
+
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '1584451555126363']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1584451555126363&amp;ev=PixelInitialized" /></noscript>
+    
+    
+    <!-- Google Tag Manager -->
+    <!--<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XTSMK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-XTSMK');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <!--<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T5PX79"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T5PX79');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+* {
+    font-family: "Microsoft YaHei";
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+
+/* basic */
+
+blockquote,
+pre,
+hr,
+
+/* formatting */
+
+form,
+input,
+textarea,
+button,
+fieldset,
+legend,
+
+/* forms */
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+
+/* lists */
+
+th,
+td,
+
+/* tables */
+
+div {
+    /* styles */
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+img {
+    vertical-align: middle;
+    outline: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+button,
+label,
+.pointer {
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+
+    display: block;
+}
+
+
+/* Clearfix */
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+/* Disabled Mouse Effect */
+
+.disabled {
+    pointer-events: none;
+}
+
+
+/* Show && Hide */
+
+*[hidden],
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+
+/* 0.4s Transition */
+
+.transition {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}

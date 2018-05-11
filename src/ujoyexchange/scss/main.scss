@@ -1,0 +1,276 @@
+@import "common";
+@import "_mixin";
+@import "_dimen";
+
+body {
+    position: relative;
+    width: 100%;
+}
+
+.wrap{
+	@include size(auto,836px);
+	background: url('../img/bg.jpg') no-repeat top center;
+}
+
+.main{
+	@include size(544px,auto);
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.title{
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 24px;
+	color: #ec6401;
+}
+
+.form{
+	padding: 30px 50px;
+	@include size(auto,422px);
+
+	&-group{
+		position: relative;
+		@include size(100%,40px);
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+
+	&-control{
+		position: relative;
+		z-index: 1;
+		padding: 0 10px;
+		@include size(auto,100%);
+		font-size: 16px;
+		color: #333;
+		line-height: 40px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #ede7e5 !important;
+	}
+
+	&-card{
+		width: 100%;
+		border: none;
+		background: none;
+	}
+
+	&-code{
+		width: 308px;
+		border: none;
+		background: none;
+	}
+
+	&-btn{
+		position: absolute;
+		top: 13px;
+		right: 0;
+		@include size(16px,14px);
+		background: url('../img/btn-sj.png');
+		cursor: pointer;
+	}
+
+	&-img{
+		position: absolute;
+		top: 5px;
+		right: 30px;
+		@include size(100px,30px);
+	}
+
+	&-refresh{
+		position: absolute;
+		right: 0;
+		top: 12px;
+		@include size(15px,15px);
+		background: url('../img/btn-fresh.png');
+		cursor: pointer; 
+	}
+
+	&-submit{
+		@include size(100%,50px);
+		margin-bottom: 30px;
+	}
+
+	&-button{
+		@include size(100%,100%);
+		font-size: 24px;
+		color: #fff;
+		text-align: center;
+		line-height: 50px;
+		background: url('../img/bg-btn.png');
+		border:none;
+		outline: none;
+	}
+
+	&-record{
+		@include size(auto,auto);
+		text-align: center;
+	}
+
+	&-link{
+		font-size: 16px;
+		color: #1696e7;
+	}
+}
+
+.notices{
+	margin-top: 30px;
+
+	&-item{
+		padding: 5px;
+		font-size: 14px;
+		color: #666;
+	}
+}
+
+.mask{
+	@include mask;
+}
+
+.mask2{
+	position:absolute;
+	z-index: 1;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background-color:#000000;
+	opacity:0.8;
+	display:none;
+}
+.dialog{
+	display: none;
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	margin-top: -111px;
+	left: 50%;
+	margin-left: -292px;
+	@include size(584px,222px);
+	background-color: #fff;
+	box-shadow: 0px 0px 5px #ed6a02;
+	border: 1px solid #ed6a02;
+	border-radius: 5px;
+}
+
+.lists{
+	@include size(100%,100%);
+	overflow-y: scroll;
+}
+
+.list{
+	padding: 15px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #ede7e5;
+	cursor: pointer;
+
+	&:last-child{
+		border: none;
+	}
+
+	&:hover{
+		color: #ec6401;
+	}
+}
+
+.popup{
+	display:none;
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	@include size(652px,600px);
+	margin-left: -326px;
+	// margin-top: -300px;
+	box-shadow: 0px 0px 5px #ede7e5;
+	background-color: #fff;
+
+
+	&-head{
+		position: relative;
+		@include size(100%,47px);
+		background-color: #ed6400;
+	}
+
+	&-exit{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		@include size(24px,24px);
+		background: url('../img/exit.png');
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	&-title{
+		padding: 4px 0;
+		margin: 0;
+		color: #fff;
+		text-align: center;
+		font-size: 26px;
+	}
+
+	&-body{
+		padding: 20px 10px 10px;
+		height: 523px;
+    	overflow-y: scroll;
+	}
+
+	&-records{
+		padding: 0 20px;
+		border: 1px solid #ede7e5;
+	}
+
+	&-record{
+		padding: 20px 0;
+		border-bottom: 1px solid #ede7e5;
+
+		&:last-child{
+			border: none;
+		}
+	}
+
+	&-left{
+		float: left;
+		@include size(360px,auto);
+		margin-right: 20px;
+	}
+
+	&-right{
+		overflow: hidden;
+		@include size(auto,auto);
+		margin-left: 10px;
+	}
+
+	&-game,&-role{
+		padding-bottom: 15px;
+		font-size: 24px;
+		color: #333;
+		line-height: 1.2;
+		word-break: break-word;
+	}
+
+	&-code,&-time{
+		font-size: 22x;
+		color: #999;
+	}
+}
+
+.placeholder{
+	position: absolute;
+	z-index: 0;
+	top: 8px;
+	left: 10px;
+	font-size: 16px;
+	color: #818181;
+}
+.nocards{
+	text-align:center;
+	font-size:24px;
+}
+.cardpop{
+	margin-top:0;
+}

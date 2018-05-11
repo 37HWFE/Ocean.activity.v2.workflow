@@ -1,0 +1,22 @@
+@mixin size($width, $height:$width){
+	width: $width;
+	height: $height;
+}
+
+@mixin bg($bg-info,$type:false){
+    background: $bg-info;
+    @if $type {
+        background-size: $type;
+    }
+}
+
+@mixin mask{
+	display: none;
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(1,1,1,.8);
+}
